@@ -3,7 +3,14 @@
 class homeController extends Controller{
 
   public function index(){
-    echo "Hello World!";
+      $usu = new Usuario();
+      $usu->setName('Demolidor');
+
+      $dados = array(
+        'name' => $usu->getName()
+      );
+      $this->loadView('home', $dados);
+
   }
 
 }
