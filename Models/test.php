@@ -2,7 +2,7 @@
 
 class Test{
    private $nome;
-   private $mail;
+   private $email;
    private $info;
 
 
@@ -14,11 +14,11 @@ class Test{
      return $this->nome;
    }
 
-   public function setEmail($mail){
+   public function setEmail($email){
      $this->email = $email;
    }
 
-   public function getEmail($email){
+   public function getEmail(){
      return $this->email;
    }
 
