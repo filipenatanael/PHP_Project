@@ -22,6 +22,13 @@ class testController extends Controller{
     $this->loadView('testing', $dados);
   }
 
+
+  public function comParamentro($tipo, $modelo, $cor){
+    echo "</br></br>Tipo: ".$tipo;
+    echo "</br>Modelo: ".$modelo;
+    echo "</br>Cor: ".$cor;
+  }
+
 }
 
 ?>
