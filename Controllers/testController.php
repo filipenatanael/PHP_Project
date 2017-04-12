@@ -11,7 +11,9 @@ class testController extends Controller{
     $model_Test->setInfo('Informações releavantes de dados!');
 
     $dados = array(
-      'info' => $model_Test->getInfo()
+      'info' => $model_Test->getInfo(),
+      'nome' => $model_Test->getNome(),
+      'email' => $model_Test->getNome()
     );
 
     $this->loadView('testing', $dados);
