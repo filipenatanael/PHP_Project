@@ -9,9 +9,11 @@ class homeController extends Controller{
       $dados = array(
         'name' => $usu->getName()
       );
-      $this->loadView('home', $dados);
+      //$this->loadView('home', $dados);
+      $this->loadTemplate('home', $dados);
 
   }
+
 
 }
 
