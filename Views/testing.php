@@ -1,3 +1,8 @@
-<h5>Usuario: <?php echo $nome ?> </h5>
-<h5>Usuario: <?php echo $email ?> </h5>
-<h5>Usuario: <?php echo $info ?> </h5>
+
+
+<?php
+foreach ($clientes as $x) {
+  echo "Nome Cliente: ".$x['name']."</br>";
+}
+
+?>

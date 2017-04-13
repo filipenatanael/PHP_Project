@@ -29,6 +29,13 @@ class testController extends Controller{
     echo "</br>Cor: ".$cor;
   }
 
+  public  function clientesCadastrados(){
+    $clientes = new Clientes();
+    $dados['clientes'] = $clientes->getClientes();
+
+    $this->loadTemplate('testing', $dados);
+  }
+
 }
 
 ?>

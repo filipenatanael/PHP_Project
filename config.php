@@ -7,14 +7,14 @@ $config = array();
 
 if(ENVIRONMENT == "development"){
   $config['dbname'] = 'MVC';
-  $config['hostname'] = 'localhost';
-  $config['username'] = 'root'
-  $config['pasword'] = '';
+  $config['hostname'] = 'localhost:3306';
+  $config['username'] = 'root';
+  $config['password'] = '';
 }else{
   $config['dbname'] = '###';
   $config['hostname'] = '###';
-  $config['username'] = '###'
-  $config['pasword'] = '###';
+  $config['username'] = '###';
+  $config['password'] = '###';
 }
 
 ?>

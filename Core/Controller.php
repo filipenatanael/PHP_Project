@@ -11,7 +11,7 @@ class Controller{
     include 'Views/template.php';
   }
 
-  public function loadviewInTemplate($viewName, $viewData = array()){
+  public function loadViewInTemplate($viewName, $viewData = array()){
     extract($viewData);
     include 'Views/'.$viewName.'.php';
   }
