@@ -1,6 +1,9 @@
 <?php
 
 class homeController extends Controller{
+  public function __construct() {
+         parent::__construct();
+     }
 
   public function index(){
       $usu = new Usuario();
@@ -13,16 +16,26 @@ class homeController extends Controller{
 
   }
 
-  public  function ListClients(){
+  public function ListClients(){
     $clientes = new Clientes();
     $dados['clientes'] = $clientes->getClientes();
     $this->loadTemplate('testing', $dados);
   }
 
-  public  function RegisterClients(){
+  public function RegisterClients(){
+    if(isset($_POST['cadastre'])){
+      $name = $_POST["name"];
+      //$name = $name." da Silva";
+      echo "</br>".$name;
+    }
+
+
+
+    //echo "<script>alert('fgdfg');</script>";
+
 
     $dados = array();
-    $this->loadTemplate('register', $dados);
+    $this->loadTemplate('RegisterClients', $dados);
   }
 
 }

@@ -8,7 +8,7 @@ class Core{
      //(No .htaccess) RewriteRule ^(.*)$ /PHP_Project/index.php?q=$1 [QSA,L]
      $url = explode("index.php", $_SERVER['PHP_SELF']);
      $url = end($url);
-
+print_r($url);
      if(!empty($url)){
        $url = explode('/',$url);
        array_shift($url);
@@ -21,7 +21,7 @@ class Core{
        }else{
            $currentAction = 'index';
        }
-       
+
        if(count($url) > 0){
          //$params = array();
          $params = $url;
