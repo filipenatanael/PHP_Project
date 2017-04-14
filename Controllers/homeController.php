@@ -19,7 +19,7 @@ class homeController extends Controller{
   public function ListClients(){
     $clientes = new Clientes();
     $dados['clientes'] = $clientes->getClientes();
-    $this->loadTemplate('testing', $dados);
+    $this->loadTemplate('ListClients', $dados);
   }
 
   public function RegisterClients(){
