@@ -2,17 +2,17 @@
 
 class homeController extends Controller{
   public function __construct() {
-         parent::__construct();
-     }
+    parent::__construct();
+  }
 
   public function index(){
-      $usu = new Usuario();
-      $usu->setName('Demolidor');
+    $usu = new Usuario();
+    $usu->setName('Demolidor');
 
-      $dados = array(
-        'name' => $usu->getName()
-      );
-      $this->loadTemplate('home', $dados);
+    $dados = array(
+      'name' => $usu->getName()
+    );
+    $this->loadTemplate('home', $dados);
 
   }
 
@@ -24,16 +24,15 @@ class homeController extends Controller{
 
   public function RegisterClients(){
     if(isset($_POST['cadastre'])){
-      $name = $_POST["name"];
-      //$name = $name." da Silva";
-      echo "</br>".$name;
+      $name = addslashes($_POST['name']);
+      $email = addslashes($_POST['email']);
+      $fone = addslashes($_POST['fone']);
+      $cliente = new Clientes();
+      $retorno = $cliente->cadCliente($name, $email, $fone);
+      echo "Aqui>>> ".$retorno." > > ".$name;
+
     }
-
-
-
-    //echo "<script>alert('fgdfg');</script>";
-
-
+    //echo "<script>alert('TESTE');</script>";
     $dados = array();
     $this->loadTemplate('RegisterClients', $dados);
   }
