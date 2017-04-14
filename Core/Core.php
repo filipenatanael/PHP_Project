@@ -7,6 +7,8 @@ class Core{
    public function run(){
       $params = array();
      //$url = substr($_SERVER['PHP_SELF'],22);
+     //$url = '/'.((isset($_GET['q']))?$GET['q']:'');
+     //(No .htaccess) RewriteRule ^(.*)$ /PHP_Project/index.php?q=$1 [QSA,L]
      $url = explode("index.php", $_SERVER['PHP_SELF']);
      print_r($url);
      $url = end($url);
@@ -17,7 +19,7 @@ class Core{
 
        $currentController = $url[0].'Controller';
        array_shift($url);
-       if(isset($url[0])){
+       if(isset($url[0]) && !empty($url[0])){
            $currentAction = $url[0];
            array_shift($url);
            print_r($url);
