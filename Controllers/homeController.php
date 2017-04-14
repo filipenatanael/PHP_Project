@@ -13,11 +13,16 @@ class homeController extends Controller{
 
   }
 
-  public  function clientesCadastrados(){
+  public  function ListClients(){
     $clientes = new Clientes();
     $dados['clientes'] = $clientes->getClientes();
-
     $this->loadTemplate('testing', $dados);
+  }
+
+  public  function RegisterClients(){
+
+    $dados = array();
+    $this->loadTemplate('register', $dados);
   }
 
 }

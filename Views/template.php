@@ -19,7 +19,7 @@
      </div>
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Home</a></li>
-       <li><a href="home/clientesCadastrados">Mostrar Usuario</a></li>
+       <li><a href="<?php echo DEFAULT_URL?>/home/ListClients">Mostrar Usuario</a></li>
        <li><a href="#">Page 2</a></li>
      </ul>
    </div>
