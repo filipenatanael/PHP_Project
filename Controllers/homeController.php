@@ -9,11 +9,16 @@ class homeController extends Controller{
       $dados = array(
         'name' => $usu->getName()
       );
-      //$this->loadView('home', $dados);
       $this->loadTemplate('home', $dados);
 
   }
 
+  public  function clientesCadastrados(){
+    $clientes = new Clientes();
+    $dados['clientes'] = $clientes->getClientes();
+
+    $this->loadTemplate('testing', $dados);
+  }
 
 }
 
