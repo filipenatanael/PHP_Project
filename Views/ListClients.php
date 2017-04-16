@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-
+      
       <?php
       foreach ($clientes as $cliente) {
         //echo "Nome Cliente: ".$cliente['name']." Email: ".$x['email']."</br>";
