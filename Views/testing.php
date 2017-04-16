@@ -1,3 +1,3 @@
 <?php
-echo "Testing null";
+echo "Testing null: Não estou passando nada!";
 ?>
