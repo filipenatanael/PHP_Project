@@ -19,8 +19,7 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="<?php echo DEFAULT_URL?>/home/ListClients">Mostrar Clientes</a></li>
-        <li><a href="<?php echo DEFAULT_URL?>/home/RegisterClients">Cadastrar Clientes</a></li>
+        <li><a href="<?php echo DEFAULT_URL?>/home/RegisterClients">Customer Registration</a></li>
       </ul>
     </div>
   </nav>
