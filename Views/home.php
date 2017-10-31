@@ -1,1 +1,1 @@
-<h3>Olá <?php echo $name ?> como esta você? </h3>
+<h3>Hello! <?php echo $name ?> How are you? </h3>
