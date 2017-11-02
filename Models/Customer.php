@@ -11,9 +11,9 @@ class Customer extends Model{
     }
     return $array;
   }
-  
+
   public function setCustomer($name, $email, $fone){
-    $sql = "INSERT INTO tbl_Customers SET name ='$name', email='$email', fone_number='$fone'";
+    $sql = "INSERT INTO tbl_Customers SET name ='$name', email='$email'";
     $this->db->query($sql);
     $id = $this->db->lastInsertId();
     return $id;

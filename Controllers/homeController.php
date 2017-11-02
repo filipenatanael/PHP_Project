@@ -1,6 +1,6 @@
 <?php
 
-class homeController extends Controller{
+class homeController extends Controller {
 
   public function __construct() {
     parent::__construct();
@@ -10,24 +10,21 @@ class homeController extends Controller{
     echo "homeController: Index";
   }
 
-  public function ListClients(){
+  public function ListCustomers(){
     $customers = new Customer();
     $data['customers'] = $customers->getCustomer();
-    $this->loadTemplate('ListClients', $data);
+    $this->loadTemplate('ListCustomers', $data);
   }
 
-  public function RegisterClients(){
+  public function RegisterCustomers(){
     if(isset($_POST['register'])){
       $name = addslashes($_POST['name']);
       $email = addslashes($_POST['email']);
-      $fone = addslashes($_POST['fone']);
       $customer = new Customer();
-      $return_function = $customer->cadCustomer($name, $email, $fone);
-      echo "Here >>> ".$return_function." > > ".$name; /* Testing only */
-
+      $customer->setCustomer($name, $email);
     }
     $data = array();
-    $this->loadTemplate('RegisterClients', $data);
+    $this->loadTemplate('RegisterCustomers', $data);
   }
 
 }
